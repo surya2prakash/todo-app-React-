@@ -1,0 +1,40 @@
+
+.nav-main{
+      width: 100vw;
+      background-color: rgb(39, 39, 187);
+      height: 60px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+}
+
+h2{
+    color: white;
+    margin: 10px;
+}
+
+
+.nav-logIn{
+
+    margin: 30px;
+    padding: 10px 30px;
+
+    border-radius: 5px;
+    border: none;
+    font-size: medium;
+    
+
+    cursor: pointer;
+
+    background-color: rgb(244, 238, 238);
+     transition: transform 0.3s ease , background-color 0.3s;
+}
+
+
+.nav-logIn:hover{
+    transform: scale(1.08);
+    background-color: white;
+}
+
