@@ -7,7 +7,8 @@ export default function Navbar() {
     const navigate = useNavigate();
     const loaction = useLocation();
 
-    const isloaction = loaction.pathname === '/login';
+    const isloaction = loaction.pathname === '/login' || loaction.pathname ==='/todolist';
+    
   return (
     <div className='nav-main'>
          <h2>Todo App</h2>
