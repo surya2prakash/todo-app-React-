@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import './SignUp.css'
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
+
+
+  const navigate = useNavigate();
 
    const [input , setInput] = useState({
       firstName:"",
@@ -43,6 +47,8 @@ export default function SignUp() {
         }else{
           setForm(input);
           toast.success("SignUp successfull");
+
+          navigate("/login");
 
           setInput({
             firstName:"",
