@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 
+import './TodoList.css'
+
 export default function TodoList() {
 
     const [input,setInput]= useState({
@@ -58,10 +60,10 @@ export default function TodoList() {
 
   return (
     <div className='main_todo'>
-            <form className='' onSubmit={submitHandler}>
-                 <input type='text' placeholder='write task' name='task'value={input.task} onChange={changeHandler}/>
-                 <input type='date' name='TaskDate' value={input.TaskDate} onChange={changeHandler}/>
-                 <button>Add</button>
+            <form className='form_todo' onSubmit={submitHandler}>
+                 <input type='text' className='task_input' placeholder='write task' name='task'value={input.task} onChange={changeHandler}/>
+                 <input type='date' className='task_date' name='TaskDate' value={input.TaskDate} onChange={changeHandler}/>
+                 <button className='task_btn'>Add</button>
                   </form>
 
             <div className='ShowTask'>
@@ -69,9 +71,9 @@ export default function TodoList() {
                      todolist.length === 0 ?(<p>No task</p>):(
                          
                              todolist.map((task)=>(
-                                <div key={task.id}>
-                                      <div>{task.task}</div>
-                                 <div>{task.date}</div>
+                                <div key={task.id} className='show_container'>
+                                      <div className='show_task'>{task.task}</div>
+                                 <div className='show_date'>{task.date}</div>
                                  </div>
                                 
                                 
