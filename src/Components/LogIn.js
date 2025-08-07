@@ -4,7 +4,7 @@ import "./LogIn.css"
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-export default function LogIn() {
+export default function LogIn({isloggedIn,setloggedIn}) {
   
   const[input,setInput] = useState({
           email:'',
@@ -41,7 +41,7 @@ export default function LogIn() {
     }else{
           setForm(input);
           toast.success("login Successfully..")
-
+           setloggedIn(true);
           setInput({
             email:"",
             password:""
